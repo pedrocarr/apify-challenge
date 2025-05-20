@@ -1,0 +1,18 @@
+{
+  "name": "my_test_api",
+  "version": "1.0.0",
+  "description": "Apify Test",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "api": "node server.js",
+    "dev": "node index.js"
+  },
+  "keywords": [],
+  "author": "Pedro Henrique Silva Carvalho",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "express": "^5.1.0"
+  }
+}
