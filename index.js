@@ -16,7 +16,7 @@ async function fetchAllProducts() {
 
         try {
             const response = await axios.get(url)
-            const data = response.data;
+            const data = response.data
 
             if (data.total <= MAX_PRODUCTS_PAGINATION) {
                 products.push(...data.products)
