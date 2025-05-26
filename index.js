@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { PIVOT_PRICE_RANGES, MAX_PRODUCTS_PAGINATION } from './const.js'
 import { createFilterUrl, splitFilter } from './utils.js'
+import { writeFileSync } from 'fs'
 
 async function fetchAllProducts() {
     const products = []
@@ -36,8 +37,9 @@ async function fetchAllProducts() {
     }
 
     return products
-  }
+}
 
 fetchAllProducts().then((products) => {
     console.log(`Total products fetched: ${products.length}`)
+    writeFileSync('products.json', JSON.stringify(products, null, 2), 'utf-8')
 });
